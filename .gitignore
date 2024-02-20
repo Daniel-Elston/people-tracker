@@ -1,5 +1,9 @@
+yolov8s.pt
+data/raw
+data/interim
+data/processed
+data/external
 
-data/
 python_gitlab_ci.yml
 
 # Byte-compiled / optimized / DLL files

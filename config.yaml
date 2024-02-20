@@ -10,7 +10,14 @@ logging:
 ##########################################################################################
 
 # PATHS
-data_paths:
-  - data/raw/
+data_dir:
+  raw: data/raw/
+  processed: data/processed/
+
+img_dir: data/raw/images/
+box_dir: data/raw/boxes/
+
+img_path: data/raw/images/frame_000001.PNG
+vid_path: data/processed/output_video.avi
 
 ##########################################################################################
