@@ -47,10 +47,16 @@ class ObjectDetection():
                 # get class names from dict
                 current_class = self.CLASS_NAMES_DICT[cls]
 
+                # get central dots
+                cx = (x1+x2)//2
+                cy = (y1+y2)//2
+
                 # if current_class == 'person':
                 if conf > 0.5:
                     cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
                     cv2.putText(img, f"{current_class} {conf}", (x1, y1-10),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                    cv2.circle(img, (cx, cy), 5, (0, 0, 255), -1)
 
         cv2.imwrite('data/interim/detected_frame_000001.PNG', img)
+        # APPLY LOGGING TO GIVE INFO REGARDING THE SHAPES OF IN/OUT

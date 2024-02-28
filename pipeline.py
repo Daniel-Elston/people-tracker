@@ -40,9 +40,9 @@ class Pipeline:
         self.logger.info('Starting pipeline...')
         img = cv2.imread(self.img_path)
 
-        self.get_metadata()
+        # self.get_metadata()
         # self.process_data()
-        self.play_capture(path=self.vid_path, fps=0)
+        self.play_capture(path=self.vid_path, fps=10)
 
         # 'data/processed/output_video.avi')
         object_detection = ObjectDetection(self.config, self.img_path)
@@ -52,8 +52,21 @@ class Pipeline:
         self.logger.info('Ending pipeline...')
 
     def test(self):
-        self.logger.info('This is a test')
-        self.play_capture(path=self.vid_path, fps=0)
+        # self.logger.info('TEST...')
+        # img = cv2.imread(self.img_path)
+
+        # self.get_metadata()
+        # # self.process_data()
+        # self.play_capture(path=self.vid_path, fps=10)
+
+        # 'data/processed/output_video.avi')
+
+        object_detection = ObjectDetection(self.config, self.img_path)
+        for img in self.img_dir.rglob('*.PNG'):
+            results = object_detection.detect_objects(img)
+            object_detection.draw_boxes(img, results)
+            self.play_capture(path=img, fps=10)
+            # print(image_path)
 
 
 if __name__ == '__main__':
