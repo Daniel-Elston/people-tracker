@@ -9,6 +9,7 @@ from src.data.make_dataset import MakeDataset
 from src.data.metadata import Metadata
 from src.data.views import ViewCapture
 from src.models.object_detection import ObjectDetection
+from src.models.tracking import SimpleTracker
 from utils.setup_env import setup_project_env
 
 
@@ -36,7 +37,7 @@ class Pipeline:
         view = ViewCapture(self.config)
         view.play_capture(path, fps)
 
-    def main(self):
+    def single_img_detect(self):
         self.logger.info('Starting pipeline...')
         img = cv2.imread(self.img_path)
 
@@ -48,6 +49,20 @@ class Pipeline:
         object_detection = ObjectDetection(self.config, self.img_path)
         results = object_detection.detect_objects(img)
         object_detection.draw_boxes(img, results)
+
+        self.logger.info('Ending pipeline...')
+
+    def main(self):
+        self.logger.info('Starting pipeline...')
+        # img = cv2.imread(self.img_path)
+
+        # self.get_metadata()
+        # self.process_data()
+        # self.play_capture(path=self.vid_path, fps=10)
+
+        tracking = SimpleTracker(self.config, self.vid_path)
+        # results = tracking.tracker()
+        tracking.tracker()
 
         self.logger.info('Ending pipeline...')
 
