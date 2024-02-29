@@ -13,8 +13,8 @@ class ViewCapture:
         self.vid_path = Path(config['vid_path'])
         self.logger = logging.getLogger(self.__class__.__name__)
 
-    def play_vid(self, fps):
-        cap = cv2.VideoCapture(str(self.vid_path))
+    def play_vid(self, path, fps):
+        cap = cv2.VideoCapture(str(path))
 
         if not cap.isOpened():
             print("Error: Could not open video.")
@@ -50,8 +50,8 @@ class ViewCapture:
     def play_capture(self, path, fps):
         form = str(path.suffix[1:])
         try:
-            if form == 'avi':
-                self.play_vid(fps)
+            if form in ['avi', 'mp4']:
+                self.play_vid(path, fps)
             elif form == 'PNG':
                 self.play_img()
             else:

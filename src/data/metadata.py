@@ -54,3 +54,8 @@ class Metadata:
 
         self.logger.debug(f"Total memory usage: {mem_usage}MB")
         self.logger.debug(f"Total memory usage per image: {mem_usage_img}MB")
+
+    def get_metadata(self):
+        self.iter_img_dir()
+        self.get_img_dim()
+        self.get_mem_usage()
