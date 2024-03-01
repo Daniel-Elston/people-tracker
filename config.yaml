@@ -19,7 +19,7 @@ box_dir: data/raw/boxes/
 
 img_path: data/raw/images/frame_000001.PNG
 vid_path: data/processed/processed1.avi
-output_path: reports/figures/result1.mp4
+output_path: reports/results/result1.mp4
 
 results: reports/
 

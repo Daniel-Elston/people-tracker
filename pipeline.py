@@ -87,6 +87,7 @@ class Pipeline:
         self.logger.info('Ending pipeline...')
 
     def test(self):
+        """Show resultant capture with tracking"""
         fps = cv2.CAP_PROP_FPS
         path = Path('reports/figures/result1.mp4')
         self.play_capture(path, fps)
@@ -95,5 +96,5 @@ class Pipeline:
 if __name__ == '__main__':
     project_dir, config, setup_logs = setup_project_env()
     pipeline = Pipeline(config)
-    # pipeline.main()
-    pipeline.test()
+    pipeline.main()
+    # pipeline.test()
