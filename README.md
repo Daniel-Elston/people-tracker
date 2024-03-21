@@ -1,3 +1,5 @@
+![result](data/interim/detected_frame_000001.PNG)
+
 
 # Human-Tracking Algorithm Using YOLOv8 and DeepSORT
 
@@ -29,15 +31,6 @@ The dataset consists of short video clips capturing people moving through variou
 - **Object Detection:** Implementing YOLOv8 for real-time object detection to identify individuals within the video frames.
 - **Object Tracking:** Utilizing DeepSORT to track the detected individuals across the video sequence, ensuring continuity and accuracy in movement tracking.
 - **Video Processing:** Applying OpenCV for handling video data, including reading, processing, and displaying video frames for analysis and tracking.
-
-### Code Snippet
-
-This section would typically include a brief code snippet illustrating how YOLOv8 and DeepSORT are integrated and used within your Python environment. Ensure to provide comments for clarity and guidance on how the snippet fits into the broader project context.
-
-```python
-# Example code for initializing YOLOv8 and DeepSORT for object detection and tracking
-# Note: This is a simplified illustration. Specific implementation details may vary.
-```
 
 ---
 
