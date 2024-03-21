@@ -1,56 +1,48 @@
-CV_Model_Compare
-==============================
 
-A comparison of self made CV classification models and pre-trained models
+# Human-Tracking Algorithm Using YOLOv8 and DeepSORT
 
-Project Organization
-------------
+This project focuses on the development of a human-tracking algorithm that applies YOLOv8 for object detection combined with DeepSORT for tracking. The aim is to analyze and track the movement of individuals through a mall, using a short video dataset as the foundation for our detection and tracking model.
 
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   ├── pipeline.py    <- Central pipeline class integrating directory scripts
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    ├── config.yaml          <- Configuration settings and parameters for the project.
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    └── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+#### -- Project Status: [Complete]
 
+---
 
---------
+## Project Objective
 
-<p><small>Project structure based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+In crowded environments like malls, tracking the movement and behavior of individuals can be invaluable for security and retail analytics. This project leverages the YOLOv8 model for its robust object detection capabilities, alongside DeepSORT, an advanced tracking algorithm, to accurately follow individuals across video frames. Our objective is to demonstrate the efficacy of these technologies in real-world scenarios.
+
+## Raw Data
+
+The dataset consists of short video clips capturing people moving through various areas of a mall.
+
+**Source:** [Kaggle - People Tracking](https://www.kaggle.com/datasets/trainingdatapro/people-tracking)
+
+## Technologies
+
+* Python
+* YOLOv8 (You Only Look Once version 8)
+* DeepSORT
+* OpenCV (cv2)
+
+## Methodologies
+
+- **Object Detection:** Implementing YOLOv8 for real-time object detection to identify individuals within the video frames.
+- **Object Tracking:** Utilizing DeepSORT to track the detected individuals across the video sequence, ensuring continuity and accuracy in movement tracking.
+- **Video Processing:** Applying OpenCV for handling video data, including reading, processing, and displaying video frames for analysis and tracking.
+
+### Code Snippet
+
+This section would typically include a brief code snippet illustrating how YOLOv8 and DeepSORT are integrated and used within your Python environment. Ensure to provide comments for clarity and guidance on how the snippet fits into the broader project context.
+
+```python
+# Example code for initializing YOLOv8 and DeepSORT for object detection and tracking
+# Note: This is a simplified illustration. Specific implementation details may vary.
+```
+
+---
+
+## Contacts
+
+For more information or to discuss this project further, please reach out.
+
+Email: delstonds@outlook.com
