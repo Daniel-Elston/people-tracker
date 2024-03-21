@@ -1,4 +1,4 @@
-![result](data/interim/detected_frame_000001.PNG)
+![result](reports/figures/detected_frame_000001.PNG)
 
 
 # Human-Tracking Algorithm Using YOLOv8 and DeepSORT
